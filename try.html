@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num">
+<button onclick="check()">Check</button>
+    <script>
+         try {
+  let x = y + 10;   // y is not defined (error)
+} catch (err) {
+  console.log("Error occurred:", err.message);
+} finally {
+  console.log("This will always run");
+}
+
+
+function check() {
+  try {
+    let num = document.getElementById("num").value;
+
+    if (num == "") {
+      throw "Input is empty";
+    }
+
+    if (isNaN(num)) {
+      throw "Not a number";
+    }
+
+    alert("Valid number: " + num);
+
+  } catch (err) {
+    alert("Error: " + err);
+  } finally {
+    console.log("Validation complete");
+  }
+}
+try {
+    if (b == 0) {
+      throw "Cannot divide by zero";
+    }
+
+    return a / b;
+
+  } catch (e) {
+    console.log("Error:", e);
+  } finally {
+    console.log("Operation attempted");
+  }
+
+function check() {
+  try {
+    let num = document.getElementById("num").value;
+
+    if (num == "") {
+      throw "Input is empty";
+    }
+
+    if (isNaN(num)) {
+      throw "Not a number";
+    }
+
+    alert("Valid number: " + num);
+
+  } catch (err) {
+    alert("Error: " + err);
+  } finally {
+    console.log("Validation complete");
+  }
+}
+    </script>
+</body>
+</html>

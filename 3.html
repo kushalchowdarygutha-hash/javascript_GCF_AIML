@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even or Odd Table</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Print Even or Odd Numbers</h2>
+    
+    <label for="limit">Upper Limit:</label>
+    <input type="number" id="limit" value="20">
+    
+    <label for="type">Type:</label>
+    <select id="type">
+        <option value="even">Even</option>
+        <option value="odd">Odd</option>
+    </select>
+    
+    <button onclick="generateTable()">Generate Table</button>
+
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+        function generateTable() {
+            const limit = parseInt(document.getElementById('limit').value);
+            const type = document.getElementById('type').value;
+            const tableBody = document.getElementById('tableBody');
+            
+            
+            tableBody.innerHTML = ""; 
+
+            let count = 1;
+            for (let i = 1; i <= limit; i++) {
+                
+                const isEven = (i % 2 === 0);
+                
+                if ((type === "even" && isEven) || (type === "odd" && !isEven)) {
+                    
+                    let row = `<tr>
+                                    <td>${count++}</td>
+                                    <td>${i}</td>
+                               </tr>`;
+                    tableBody.innerHTML += row;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

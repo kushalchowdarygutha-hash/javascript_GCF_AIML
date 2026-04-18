@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+const now = new Date();
+
+document.write("Full Date:", now);
+document.write("Year:", now.getFullYear());
+document.write("Month:", now.getMonth() + 1); // 0-based
+document.write("Date:", now.getDate());
+document.write("Hours:", now.getHours());
+document.write("Minutes:", now.getMinutes());
+document.write("Seconds:", now.getSeconds());
+
+document.write("Full Date:", now);
+document.write("Year:", now.getFullYear());
+document.write("Month:", now.getMonth() + 1); // 0-based
+document.write("Date:", now.getDate());
+document.write("Hours:", now.getHours());
+document.write("Minutes:", now.getMinutes());
+document.write("Seconds:", now.getSeconds());
+
+const date = new Date();
+
+// MM/DD/YYYY
+let usFormat = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+
+// DD/MM/YYYY
+let indiaFormat = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+
+document.write("US Format:", usFormat);
+document.write("India Format:", indiaFormat);
+
+const today = new Date();
+
+    </script>
+</body>
+</html>
